@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body,#root,.div{height:auto;width:100%;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;font-family:sans-serif;font-size:3dvh;}
+button{padding:2vh;font-size:2.5dvh;border:none;border-radius:2vh;}
+.menu-button{height:10dvh;width:10dvh;color:#000000;background-color:#fff2f288;float:right;}
+.menu-button:hover{background-color:#fff2f2bb;}
+.main-button{color:#ffffff;background-color:#d42525;}
+.main-button:hover{background-color:#c02020;}
+.div{height:90vh;width:100%;padding:2%;left:0;right:0;}
+.main-div{background-color:#ffcfc0;background-image:url(/images/background.svg);}
+.secondary-div{background-color:#c0edff;}
+h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}
+.main-button-container{width:75%;display:flex;justify-content:space-around}
+
+@media only screen and (min-width:800px) {
+    .main-button-container{width:40%;}
+}
