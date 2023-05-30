@@ -2,18 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body,#root,.div{height:auto;width:100%;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;font-family:sans-serif;font-size:3dvh;}
+html,body,#root,.segment{height:auto;width:100%;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;font-family:sans-serif;font-size:3dvh;}
 button{padding:2vh;font-size:2.5dvh;border:none;border-radius:2vh;}
 .menu-button{height:10dvh;width:10dvh;color:#000000;background-color:#fff2f288;float:right;}
 .menu-button:hover{background-color:#fff2f2bb;}
 .main-button{color:#ffffff;background-color:#d42525;}
-.main-button:hover{background-color:#c02020;}
-.div{height:90vh;width:100%;padding:2%;left:0;right:0;}
-.main-div{background-color:#ffcfc0;background-image:url(/images/background.svg);}
-.secondary-div{background-color:#c0edff;}
+.main-button:hover{background-color:#c02020!important}
+.segment{height:90vh;width:100%;padding:2%;left:0;right:0;}
+.main-segment{background-color:#ffcfc0;background-image:url(/images/background.svg);}
+.secondary-segment{background-color:#ddfeff;display:flex;flex-direction:column;align-items:center;justify-content:space-around;}
+/* .secondary-segment{background-color:#c0edff;} */
 h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}
 .main-button-container{width:75%;display:flex;justify-content:space-around}
+.secondary-segment-left-top,.secondary-segment-right-bottom{width:80%;text-align:center;}
+.menu{padding:2%;float:right;right:0;margin:1% 2%;background-color:#fff2f2bb;border:0.1vw solid #fff2f2;border-radius:2vh;z-index:1;position:absolute;}
+.footer{height:45vh;width:100%;background-color:#3de8ff;background-image:url(/images/background.svg);filter:invert(100%);display:flex;flex-direction:row;align-items:center;justify-content:space-around}
+.footer::selection,.footer::-moz-selection,.footer::-webkit-selection,.footer::-webkit-user-select{background-color:white!important;}
+::selection{color:white;background-color:#c02020;}
+/* .footer{3de8ff,3cffff} */
 
 @media only screen and (min-width:800px) {
     .main-button-container{width:40%;}
+    .secondary-segment-left-top,.secondary-segment-right-bottom{width:50%;}
+    .secondary-segment{flex-direction:row;padding:0% 5% 0% 5%;}
 }

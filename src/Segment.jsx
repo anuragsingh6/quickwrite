@@ -1,6 +1,6 @@
 import React from "react";
 
-function Section({children, ...attributes}){
+function Segment({children, ...attributes}){
     return(
         <>
         <div {...attributes}>
@@ -10,4 +10,4 @@ function Section({children, ...attributes}){
     )
 }
 
-export default Section
+export default Segment
