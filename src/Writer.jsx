@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { ThemeContext } from "./App";
 
-let wordsfile;let words;let possibleWords=[];let searchWord="";
+let wordsfile;let words;let possibleWords=[];let searchWord="";let lastSpace;let listWords=[];
 wordsfile=await fetch('./src/words.txt');
 let wordsObj=await wordsfile.json();
 words=wordsObj.words;
@@ -12,29 +12,33 @@ export default function Writer(){
     const [text, setText] = useState("");
 
     function searchWords(){
-        possibleWords=[];
+        possibleWords=[];lastSpace=0;
 
         function matchingWordFinder(){
-            for (let i=0;i<words.length;i++){if (words[i].includes(searchWord.toLowerCase())){possibleWords.push(words[i]);}};
+            for (let i=0;i<words.length;i++){if (words[i].toLowerCase().includes(searchWord.toLowerCase())){possibleWords.push(words[i]);}};
         }
 
-        if (writerText.value.charAt(writerText.value.length-1)===" "){possibleWords=[];}
+        if ((writerText.value.charAt(writerText.value.length-1)===" ")||(writerText.value==="")){possibleWords=[];}
         else if (writerText.value.includes(" ")){
-            let lastSpace=0;for (let i=0;i<writerText.value.length;i++){if (writerText.value[i]===" "){lastSpace=i}};searchWord=writerText.value.substring(lastSpace+1);
-            console.log(lastSpace,searchWord);matchingWordFinder();
+            for (let i=0;i<writerText.value.length;i++){if (writerText.value.charAt(i)===" "){lastSpace=i}};searchWord=writerText.value.substring(lastSpace+1);
+            console.log(lastSpace,searchWord);matchingWordFinder();addMatchingWordsToList();
         }
-        else{searchWord=writerText.value;matchingWordFinder();}
-        console.log("possibleWords:",possibleWords);
-        addMatchingWordsToList();
+        else{searchWord=writerText.value;matchingWordFinder();addMatchingWordsToList();}
+        // console.log("possibleWords:",possibleWords);
+    }
+
+    let wordElements=document.getElementsByClassName("matchingWordElement");
+    for (let i=0;i<wordElements.length;i++){wordElements[i].addEventListener("click",appendWord)};
+
+    function appendWord(){
+        let preSpace="";if (lastSpace===0){preSpace=""}else{preSpace=" "}
+        setText(text.substring(0,lastSpace)+preSpace+this.innerText+" ");
+        possibleWords=[];listWords=[];matchingWordsList.innerHTML="";
     }
 
     function addMatchingWordsToList(){
-        // for (let i=0;i<possibleWords.length;i++){}
-        matchingWordsList.innerHTML="";
-        let listWords=[];for (let i=0;i<10;i++){listWords.push(possibleWords[i])};
-        if (listWords.length!==0){listWords.map((value, key)=>{matchingWordsList.innerHTML+=`<div key=${key}>${value}</div>`;})}
-        else{matchingWords.innerHTML="";};
-        
+        matchingWordsList.innerHTML="";listWords=[];for (let i=0;i<10;i++){listWords.push(possibleWords[i])};
+        listWords.map((value, key)=>{if (value!==undefined){matchingWordsList.innerHTML+=`<div key=${key} class="matchingWordElement">${value}</div>`;}})
     }
 
     return (
@@ -49,8 +53,10 @@ export default function Writer(){
             <div className="writer-button-break"></div>
             <button id={theme} type="button" className="writer-button" onClick={()=>{setText("");}} style={{width:"auto",padding:"0 1% 0 1%",float:"right",right:"0"}}>Clear All Text</button>
         </div>
-        <textarea id="writerText" list="matchingWordsList" className={`writer-text ${theme}`} style={{fontSize:`${FONTSIZE}px`}} value={text} onChange={(e)=>{setText(e.target.value);searchWords();}}></textarea>
-        <div id="matchingWordsList" className={theme}></div>
+        <div style={{height:"100%",width:"100%",display:"flex",flexDirection:"row"}}>
+        <textarea id="writerText" className={`writer-text ${theme}`} style={{fontSize:`${FONTSIZE}px`}} value={text} onChange={(e)=>{setText(e.target.value);searchWords();}}></textarea>
+        <div id="matchingWordsSidebar" className={theme}><div id="Suggestions">Suggestions</div><div id="matchingWordsList"></div></div>
+        </div>
         </div>
         </>
     )

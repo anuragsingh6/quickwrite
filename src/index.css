@@ -19,7 +19,7 @@ html,body,#root,.segment,.main-segment-content-container,.page404,.writerpage,.w
 .main-button:hover{background-color:#c02020!important}
 .segment{height:90vh;width:100%;left:0;right:0;}
 .main-segment-content-container{height:90vh;width:100%;padding:2%;justify-content:center;z-index:1;position:absolute;}
-.main-segment-image-container{height:100%;width:100%;background-image:url(/images/background.svg);z-index:0;}
+.main-segment-image-container{height:100%;width:100%;background-image:url(/images/background.svg);z-index:0;background-size:auto;position:absolute;top:0;left:0;}
 #dark.main-segment-image-container{filter:invert(100%);}
 #light.main-segment,#light.writerpage{color:black;background-color:#ffcfc0;}
 #dark.main-segment,#dark.writerpage{color:white;background-color:#751c01;}
@@ -69,11 +69,15 @@ h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}
 .writer-input-font-size{-moz-appearance:none;appearance:none;}
 .light.writer-input-font-size{color:black;background-color:white;}
 .dark.writer-input-font-size{color:white;background-color:#333333;}
-#matchingWordsList{height:25vh;width:auto;padding:1%;border:0.1vw solid grey;border-radius:2vw;z-index:2;position:absolute;overflow-y:scroll;}
-.light#matchingWordsList{background-color:white;}
-.dark#matchingWordsList{background-color:#333333;}
-::-webkit-scrollbar{width:10%;background-color:#333333;}
-::-webkit-scrollbar-track{width:10%;background-color:#333333;}
+#matchingWordsSidebar{height:84%;width:20%;border:0.1vw solid grey;}
+.light#matchingWordsSidebar{background-color:white;}
+.dark#matchingWordsSidebar{background-color:#333333;}
+#matchingWordsList{padding:1%;font-size:2.5vw;}
+::-webkit-scrollbar{width:1vw;}
+::-webkit-scrollbar-track{background:#ffcfc0;border-radius:2vw;}
+::-webkit-scrollbar-thumb{background:#831f01;border-radius:20vw;}
+#Suggestions{width:100%;padding:3% 0% 3% 0%;font-size:2vw;text-align:center;border-bottom:0.1vw solid grey;}
+.matchingWordElement{padding:2% 0% 2% 0%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
 
 @media only screen and (min-width:800px) {
     .main-button-container{width:40%;}
@@ -81,4 +85,7 @@ h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}
     .secondary-segment:not(.segment4){flex-direction:row;padding:0% 5% 0% 5%;}
     .image-container{height:60%;}
     .writer-button{width:5%;}
+    #matchingWordsSidebar{width:15%;}
+    #matchingWordsList{font-size: 1.5vw;}
+    #Suggestions{font-size:1.5vw;}
 }
