@@ -2,6 +2,7 @@ import { createContext, useContext } from "react";
 import { ThemeContext } from "./App";
 import { Link } from "react-router-dom";
 
+// Page displayed when trying to visit an invalid/non-existent address.
 export default function Page404(){
     const {theme} = useContext(ThemeContext);
     return (

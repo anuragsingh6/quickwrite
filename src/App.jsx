@@ -7,12 +7,14 @@ import Page404 from './Page404';
 
 export const ThemeContext = createContext("light");
 
+// The main app component.
 function App() {
 
     const [menuOpen, setMenuOpen]=useState(false);
     const [theme, setTheme] = useState("light");
     const [darkModeButtonText, setDarkModeButtonText] = useState("🌙");
 
+    // Function that handles toggling of dark and light mode.
     function togggleMode(){
       if (theme === "dark"){setTheme("light");setDarkModeButtonText("🌙")}
       else{setTheme("dark");setDarkModeButtonText("☀️");}
