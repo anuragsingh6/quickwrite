@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anuragsingh6.github.io/quickwrite",
+  "homepage": "https://anuragsingh6.github.io/quickwrite/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
