@@ -1,4 +1,4 @@
-# [QuickWrite](https://anuragsingh6.github.io/quickwrite)
+# [QuickWrite &nbsp;&nbsp;<img src="https://raw.githubusercontent.com/anuragsingh6/quickwrite/gh-pages/assets/logo-6f0784e5.svg">](https://anuragsingh6.github.io/quickwrite)
 an autocomplete text editor
 
 # How to use
