@@ -19,7 +19,7 @@ html,body,#root,.segment,.main-segment-content-container,.page404,.writerpage,.w
 .main-button:hover{background-color:#c02020!important}
 .segment{height:90vh;width:100%;left:0;right:0;}
 .main-segment-content-container{height:90vh;width:100%;padding:2%;justify-content:center;z-index:1;position:absolute;}
-.main-segment-image-container{height:100%;width:100%;background-image:url(./images/background.svg);z-index:0;background-size:auto;position:absolute;top:0;left:0;}
+.main-segment-image-container{height:100%;width:100%;background-image:url(/src/images/background.svg);z-index:0;background-size:auto;position:absolute;top:0;left:0;}
 #dark.main-segment-image-container{filter:invert(100%);}
 #light.main-segment,#light.writerpage{color:black;background-color:#ffcfc0;}
 #dark.main-segment,#dark.writerpage{color:white;background-color:#751c01;}
@@ -34,8 +34,8 @@ h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}h3{padding-top:2%;}
 .secondary-segment-left-top,.secondary-segment-right-bottom{width:80%;text-align:center;}
 .image-container{height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .image{background-size:contain;background-repeat:no-repeat;width:100%;height:100%;background-position:center;}
-#light.image{background-image:url(./images/image.svg);}
-#dark.image{background-image:url(./images/image_dark.svg);}
+#light.image{background-image:url(/src/images/image.svg);}
+#dark.image{background-image:url(/src/images/image_dark.svg);}
 
 .segment2,.segment4{height:45vh;padding:10% 5% 10% 5%;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .segment5{height:75vh;}.segment2{justify-content:flex-end;}.segment4{justify-content:flex-start;}
@@ -50,7 +50,7 @@ h1,h2{font-size:10dvh;text-align:center;}h2{font-size:5dvh;}h3{padding-top:2%;}
 #dark.segment5{color:white;background-color:#751c01;}
 
 .footer{height:45vh;width:100%;color:white;display:flex;flex-direction:row;align-items:center;justify-content:space-around;}
-.footer-image-container{height:100%;width:100%;filter:invert(100%);background-image:url(./images/background.svg);z-index:0;background-color:#3de8ff;}
+.footer-image-container{height:100%;width:100%;filter:invert(100%);background-image:url(/src/images/background.svg);z-index:0;background-color:#3de8ff;}
 #dark.footer-image-container{background-color:#a9f5ff;}
 .footer-content-container{width:100%;z-index:1;position:absolute;display:flex;flex-direction:row;align-items:center;justify-content:space-around;}
 .footer::selection,.footer::-moz-selection,.footer::-webkit-selection,.footer::-webkit-user-select{background-color:white!important;}

@@ -22,7 +22,7 @@ function App() {
 
     return (
       <ThemeContext.Provider value={{theme, togggleMode, darkModeButtonText}}>
-        <Router>
+        <Router basename='/quickwrite'>
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Routes>
             <Route path="/" element={<MainPage />} />

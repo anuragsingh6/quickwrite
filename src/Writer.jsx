@@ -4,7 +4,7 @@ import { ThemeContext } from "./App";
 let wordsfile;let wordsObj;let words;let possibleWords=[];let searchWord="";let lastSpace;let listWords=[];
 
 async function loadDictionary(){
-    wordsfile=await fetch('./src/words.txt');
+    wordsfile=await fetch('/src/words.txt');
     wordsObj=await wordsfile.json();
     words=wordsObj.words;
 }
