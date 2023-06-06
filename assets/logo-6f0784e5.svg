@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 16.933332 16.933333"
+   version="1.1"
+   id="svg165"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview167"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="5.9566009"
+     inkscape:cx="90.823611"
+     inkscape:cy="35.422887"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs162" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-66.142509,-130.39783)">
+    <rect
+       style="fill:#c83737;stroke:none;stroke-width:0.400711;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
+       id="rect765-9"
+       width="16.933332"
+       height="16.933332"
+       x="66.142509"
+       y="130.39783" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.2045px;line-height:1.25;font-family:Rockwell;-inkscape-font-specification:Rockwell;fill:#ffffff;stroke-width:0.193721"
+       x="67.738472"
+       y="144.50229"
+       id="text679-8-5"
+       transform="scale(1.02025,0.98015188)"><tspan
+         sodipodi:role="line"
+         id="tspan677-9-1"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua Bold Italic';fill:#ffffff;stroke-width:0.193721"
+         x="67.738472"
+         y="144.50229">Q</tspan></text>
+  </g>
+</svg>
